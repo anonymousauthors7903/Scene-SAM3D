@@ -10,5 +10,9 @@ Publish the contents at the repository root. In Settings > Pages, select
 Deploy from a branch, main, / (root). Keep .nojekyll in place.
 
 Test through an HTTP server rather than opening index.html as a local file.
-Web fonts and optional model-viewer decoders may access external services.
+Fonts, scripts, videos, models, and their textures are served by this site.
+The current models need no external decoders. A same-origin Content Security
+Policy blocks external runtime resources, including optional CDN fallbacks.
+The page includes no visitor analytics or tracking code. GitHub Pages remains
+the hosting provider and may maintain its own service logs.
 Bundled third-party notices are retained. No new license is granted here.
