@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scene-SAM3D: Multi-View Scene Asset Generation Without Fine-Tuning</title>
+<meta name="description" content="Project page for Scene-SAM3D — training-free multi-view scene asset generation built on SAM3D.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css?v=20260922baselines">
+</head>
+<body>
+
+<nav class="top-nav" id="topNav">
+  <div class="top-nav-brand">Scene-SAM3D</div>
+  <div class="top-nav-links">
+    <a href="#intro" data-section="intro">Intro</a>
+    <a href="#pipeline" data-section="pipeline">Pipeline</a>
+    <a href="#comparison" data-section="comparison">Comparison</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="intro">
+  <h1 class="hero-title">Scene-SAM3D</h1>
+  <p class="hero-subtitle">Multi-View Scene Asset Generation Without Fine-Tuning</p>
+
+  <div class="teaser-wrapper" id="teaserWrapper">
+    <video autoplay loop muted playsinline controls preload="auto"
+           poster="assets/videos/showcase/teaser_grid_poster.jpg?v=20260923hd1440">
+<source src="assets/videos/showcase/teaser_grid.mp4?v=20260923hd1440" type="video/mp4">
+<source src="assets/videos/showcase/teaser_grid.webm?v=20260923hd1440" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>
+  </div>
+</header>
+
+<!-- ============ METHOD ============ -->
+<section class="page-section" id="pipeline">
+  <div class="section-inner card-surface scroll-reveal method-card">
+    <div class="method-copy">
+      <div class="section-eyebrow">Method</div>
+      <h2 class="section-heading">Pipeline Overview</h2>
+      <p class="section-lead">Training-free multi-view fusion: complementary view selection, latent velocity fusion in canonical space, and lightweight scene-layout optimization.</p>
+      <div class="slideshow-controls">
+        <button class="slide-btn" id="slidePrev">‹</button>
+        <button class="slide-btn" id="slidePlayPause">⏸</button>
+        <button class="slide-btn" id="slideNext">›</button>
+        <span id="slideNum">1 / 1</span>
+      </div>
+    </div>
+    <div class="method-slideshow" id="methodSlideshow"></div>
+    <div class="method-detail" id="methodDetail"></div>
+  </div>
+</section>
+
+<!-- ============ COMPARISONS ============ -->
+<section class="page-section" id="comparison">
+  <div class="section-inner card-surface scroll-reveal">
+    <div class="section-eyebrow">Comparison</div>
+    <h2 class="section-heading">Qualitative Comparisons</h2>
+    <p class="section-lead">
+      Compare reconstruction quality at both the individual-instance and complete-scene levels.
+      Choose any two methods and rotate the synchronized 3D viewers to inspect their differences.
+    </p>
+
+    <div class="comparison-stack">
+      <article class="comparison-panel" data-comparison-key="instance">
+        <div class="comparison-panel-heading">
+          <span class="comparison-index">01</span>
+          <div>
+            <h3>Instance-Level Comparison</h3>
+            <p>Shape and appearance quality for individually reconstructed objects.</p>
+          </div>
+        </div>
+        <div class="compare-controls">
+          <div class="select-field">
+            <label>Instance</label>
+            <select data-role="item"></select>
+          </div>
+          <div class="select-field">
+            <label>Left</label>
+            <select data-role="left-method"></select>
+          </div>
+          <div class="select-field">
+            <label>Right</label>
+            <select data-role="right-method"></select>
+          </div>
+        </div>
+        <p class="comparison-availability" data-role="missing-methods" aria-live="polite" hidden></p>
+        <div class="instance-view-context" data-role="input-views" hidden>
+          <div class="instance-view-heading">
+            <strong>Selected Input Views</strong>
+            <span>One anchor view and three complementary helper views</span>
+          </div>
+          <div class="instance-view-grid" data-role="input-grid"></div>
+        </div>
+        <div class="model-comparison-stage">
+          <div class="model-viewer-pane">
+            <div class="model-viewer-label" data-role="left-tag">LEFT</div>
+            <model-viewer data-role="left-model" camera-controls touch-action="pan-y"
+                          loading="lazy" reveal="auto" environment-image="neutral"
+                          tone-mapping="neutral" interaction-prompt="none"></model-viewer>
+            <div class="model-viewer-status" data-role="left-status">Loading 3D model…</div>
+            <div class="model-viewer-hint">Drag to rotate · Scroll to zoom</div>
+          </div>
+          <div class="model-viewer-pane">
+            <div class="model-viewer-label" data-role="right-tag">RIGHT</div>
+            <model-viewer data-role="right-model" camera-controls touch-action="pan-y"
+                          loading="lazy" reveal="auto" environment-image="neutral"
+                          tone-mapping="neutral" interaction-prompt="none"></model-viewer>
+            <div class="model-viewer-status" data-role="right-status">Loading 3D model…</div>
+            <div class="model-viewer-hint">Drag to rotate · Scroll to zoom</div>
+          </div>
+        </div>
+        <div class="model-viewer-toolbar">
+          <label><input type="checkbox" data-role="sync-camera" checked> Sync rotation</label>
+          <button type="button" data-role="reset-camera">↺ Reset view</button>
+        </div>
+      </article>
+
+      <article class="comparison-panel" data-comparison-key="scene">
+        <div class="comparison-panel-heading">
+          <span class="comparison-index">02</span>
+          <div>
+            <h3>Scene-Level Comparison</h3>
+            <p>Composition, relative pose, and overall consistency of reconstructed scenes.</p>
+          </div>
+        </div>
+        <div class="compare-controls">
+          <div class="select-field">
+            <label>Scene</label>
+            <select data-role="item"></select>
+          </div>
+          <div class="select-field">
+            <label>Left</label>
+            <select data-role="left-method"></select>
+          </div>
+          <div class="select-field">
+            <label>Right</label>
+            <select data-role="right-method"></select>
+          </div>
+        </div>
+        <div class="scene-reference-context" data-role="scene-references" hidden>
+          <div class="scene-reference-heading">
+            <strong>Reference Images</strong>
+            <span>RGB observations used as scene-level context</span>
+          </div>
+          <div class="scene-reference-grid" data-role="scene-reference-grid"></div>
+        </div>
+        <div class="model-comparison-stage scene-model-stage">
+          <div class="model-viewer-pane">
+            <div class="model-viewer-label" data-role="left-tag">LEFT</div>
+            <model-viewer data-role="left-model" camera-controls touch-action="pan-y"
+                          loading="lazy" reveal="auto" environment-image="neutral"
+                          tone-mapping="neutral" interaction-prompt="none"></model-viewer>
+            <div class="model-viewer-status" data-role="left-status">Loading 3D model…</div>
+            <div class="model-viewer-hint">Drag to rotate · Scroll to zoom</div>
+          </div>
+          <div class="model-viewer-pane">
+            <div class="model-viewer-label" data-role="right-tag">RIGHT</div>
+            <model-viewer data-role="right-model" camera-controls touch-action="pan-y"
+                          loading="lazy" reveal="auto" environment-image="neutral"
+                          tone-mapping="neutral" interaction-prompt="none"></model-viewer>
+            <div class="model-viewer-status" data-role="right-status">Loading 3D model…</div>
+            <div class="model-viewer-hint">Drag to rotate · Scroll to zoom</div>
+          </div>
+        </div>
+        <div class="model-viewer-toolbar">
+          <label><input type="checkbox" data-role="sync-camera" checked> Sync rotation</label>
+          <button type="button" data-role="reset-camera">↺ Reset view</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">&times;</button>
+  <img id="lightboxImg" src="" alt="">
+  <video id="lightboxVideo" controls loop muted playsinline hidden></video>
+</div>
+
+<script type="module" src="assets/js/model-viewer-4.3.1.min.js"></script>
+<script src="main.js?v=20260923hd1440"></script>
+</body>
+</html>

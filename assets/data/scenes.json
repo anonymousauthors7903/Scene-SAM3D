@@ -1,0 +1,512 @@
+{
+  "meta": {
+    "note": "Scene-SAM3D project page assets."
+  },
+  "teaser": {
+    "video": "assets/videos/showcase/teaser_grid.mp4?v=20260923hd1440"
+  },
+  "comparisonMethods": [
+    {
+      "id": "input",
+      "label": "Input"
+    },
+    {
+      "id": "trellis",
+      "label": "TRELLIS (MultiDiffusion)"
+    },
+    {
+      "id": "sam3d",
+      "label": "SAM3D"
+    },
+    {
+      "id": "multidiffusion_sam3d",
+      "label": "SAM3D (MultiDiffusion)"
+    },
+    {
+      "id": "reconviagen",
+      "label": "ReconViaGen"
+    },
+    {
+      "id": "ours",
+      "label": "Scene-SAM3D (Ours)"
+    },
+    {
+      "id": "gt",
+      "label": "Ground Truth"
+    }
+  ],
+  "instanceComparisonOrder": [
+    "room_0_instance_0002",
+    "office_0_instance_0001",
+    "office_2_instance_0010",
+    "office_3_instance_0008",
+    "office_2_instance_0005",
+    "room_0_instance_0001",
+    "1b75758486_instance_0022",
+    "9859de300f_instance_0005"
+  ],
+  "instanceComparisonItems": [
+    {
+      "id": "room_0_instance_0002",
+      "label": "instance0",
+      "images": {
+        "ours": "assets/images/comparison/instance_level/room_0_instance_0002/ours.png",
+        "gt": "assets/images/comparison/instance_level/room_0_instance_0002/gt.png"
+      },
+      "models": {
+        "ours": "assets/models/comparison/instance_level/room_0_instance_0002/ours.glb",
+        "gt": "assets/models/comparison/instance_level/room_0_instance_0002/gt.glb",
+        "multidiffusion_sam3d": "assets/models/comparison/instance_level/room_0_instance_0002/multidiffusion_sam3d.glb",
+        "reconviagen": "assets/models/comparison/instance_level/room_0_instance_0002/reconviagen.glb",
+        "sam3d": "assets/models/comparison/instance_level/room_0_instance_0002/sam3d.glb",
+        "trellis": "assets/models/comparison/instance_level/room_0_instance_0002/trellis.glb"
+      },
+      "inputViews": [
+        {
+          "role": "Anchor",
+          "frame": "rgb_10",
+          "src": "assets/images/comparison/instance_inputs/room_0_instance_0002/anchor.webp"
+        },
+        {
+          "role": "Helper 1",
+          "frame": "rgb_1736",
+          "src": "assets/images/comparison/instance_inputs/room_0_instance_0002/helper_1.webp"
+        },
+        {
+          "role": "Helper 2",
+          "frame": "rgb_1028",
+          "src": "assets/images/comparison/instance_inputs/room_0_instance_0002/helper_2.webp"
+        },
+        {
+          "role": "Helper 3",
+          "frame": "rgb_123",
+          "src": "assets/images/comparison/instance_inputs/room_0_instance_0002/helper_3.webp"
+        }
+      ],
+      "missingMethods": []
+    },
+    {
+      "id": "office_0_instance_0001",
+      "label": "instance1",
+      "images": {
+        "ours": "assets/images/comparison/instance_level/office_0_instance_0001/ours.png",
+        "gt": "assets/images/comparison/instance_level/office_0_instance_0001/gt.png"
+      },
+      "models": {
+        "ours": "assets/models/comparison/instance_level/office_0_instance_0001/ours.glb",
+        "gt": "assets/models/comparison/instance_level/office_0_instance_0001/gt.glb",
+        "reconviagen": "assets/models/comparison/instance_level/office_0_instance_0001/reconviagen.glb",
+        "trellis": "assets/models/comparison/instance_level/office_0_instance_0001/trellis.glb",
+        "multidiffusion_sam3d": "assets/models/comparison/instance_level/office_0_instance_0001/multidiffusion_sam3d.glb",
+        "sam3d": "assets/models/comparison/instance_level/office_0_instance_0001/sam3d.glb"
+      },
+      "inputViews": [
+        {
+          "role": "Anchor",
+          "frame": "rgb_961",
+          "src": "assets/images/comparison/instance_inputs/office_0_instance_0001/anchor.webp"
+        },
+        {
+          "role": "Helper 1",
+          "frame": "rgb_1228",
+          "src": "assets/images/comparison/instance_inputs/office_0_instance_0001/helper_1.webp"
+        },
+        {
+          "role": "Helper 2",
+          "frame": "rgb_828",
+          "src": "assets/images/comparison/instance_inputs/office_0_instance_0001/helper_2.webp"
+        },
+        {
+          "role": "Helper 3",
+          "frame": "rgb_1725",
+          "src": "assets/images/comparison/instance_inputs/office_0_instance_0001/helper_3.webp"
+        }
+      ],
+      "missingMethods": []
+    },
+    {
+      "id": "office_2_instance_0010",
+      "label": "instance2",
+      "images": {
+        "ours": "assets/images/comparison/instance_level/office_2_instance_0010/ours.png",
+        "gt": "assets/images/comparison/instance_level/office_2_instance_0010/gt.png"
+      },
+      "models": {
+        "ours": "assets/models/comparison/instance_level/office_2_instance_0010/ours.glb",
+        "gt": "assets/models/comparison/instance_level/office_2_instance_0010/gt.glb",
+        "reconviagen": "assets/models/comparison/instance_level/office_2_instance_0010/reconviagen.glb",
+        "trellis": "assets/models/comparison/instance_level/office_2_instance_0010/trellis.glb",
+        "multidiffusion_sam3d": "assets/models/comparison/instance_level/office_2_instance_0010/multidiffusion_sam3d.glb",
+        "sam3d": "assets/models/comparison/instance_level/office_2_instance_0010/sam3d.glb"
+      },
+      "inputViews": [
+        {
+          "role": "Anchor",
+          "frame": "rgb_1552",
+          "src": "assets/images/comparison/instance_inputs/office_2_instance_0010/anchor.webp"
+        },
+        {
+          "role": "Helper 1",
+          "frame": "rgb_1398",
+          "src": "assets/images/comparison/instance_inputs/office_2_instance_0010/helper_1.webp"
+        },
+        {
+          "role": "Helper 2",
+          "frame": "rgb_214",
+          "src": "assets/images/comparison/instance_inputs/office_2_instance_0010/helper_2.webp"
+        },
+        {
+          "role": "Helper 3",
+          "frame": "rgb_1452",
+          "src": "assets/images/comparison/instance_inputs/office_2_instance_0010/helper_3.webp"
+        }
+      ],
+      "missingMethods": []
+    },
+    {
+      "id": "office_3_instance_0008",
+      "label": "instance3",
+      "images": {
+        "ours": "assets/images/comparison/instance_level/office_3_instance_0008/ours.png",
+        "gt": "assets/images/comparison/instance_level/office_3_instance_0008/gt.png"
+      },
+      "models": {
+        "ours": "assets/models/comparison/instance_level/office_3_instance_0008/ours.glb",
+        "gt": "assets/models/comparison/instance_level/office_3_instance_0008/gt.glb",
+        "reconviagen": "assets/models/comparison/instance_level/office_3_instance_0008/reconviagen.glb",
+        "trellis": "assets/models/comparison/instance_level/office_3_instance_0008/trellis.glb",
+        "multidiffusion_sam3d": "assets/models/comparison/instance_level/office_3_instance_0008/multidiffusion_sam3d.glb",
+        "sam3d": "assets/models/comparison/instance_level/office_3_instance_0008/sam3d.glb"
+      },
+      "inputViews": [
+        {
+          "role": "Anchor",
+          "frame": "rgb_797",
+          "src": "assets/images/comparison/instance_inputs/office_3_instance_0008/anchor.webp"
+        },
+        {
+          "role": "Helper 1",
+          "frame": "rgb_1415",
+          "src": "assets/images/comparison/instance_inputs/office_3_instance_0008/helper_1.webp"
+        },
+        {
+          "role": "Helper 2",
+          "frame": "rgb_650",
+          "src": "assets/images/comparison/instance_inputs/office_3_instance_0008/helper_2.webp"
+        },
+        {
+          "role": "Helper 3",
+          "frame": "rgb_610",
+          "src": "assets/images/comparison/instance_inputs/office_3_instance_0008/helper_3.webp"
+        }
+      ],
+      "missingMethods": []
+    },
+    {
+      "id": "office_2_instance_0005",
+      "label": "instance4",
+      "images": {
+        "ours": "assets/images/comparison/instance_level/office_2_instance_0005/ours.png",
+        "gt": "assets/images/comparison/instance_level/office_2_instance_0005/gt.png"
+      },
+      "models": {
+        "ours": "assets/models/comparison/instance_level/office_2_instance_0005/ours.glb",
+        "gt": "assets/models/comparison/instance_level/office_2_instance_0005/gt.glb",
+        "reconviagen": "assets/models/comparison/instance_level/office_2_instance_0005/reconviagen.glb",
+        "trellis": "assets/models/comparison/instance_level/office_2_instance_0005/trellis.glb",
+        "multidiffusion_sam3d": "assets/models/comparison/instance_level/office_2_instance_0005/multidiffusion_sam3d.glb",
+        "sam3d": "assets/models/comparison/instance_level/office_2_instance_0005/sam3d.glb"
+      },
+      "inputViews": [
+        {
+          "role": "Anchor",
+          "frame": "rgb_1282",
+          "src": "assets/images/comparison/instance_inputs/office_2_instance_0005/anchor.webp"
+        },
+        {
+          "role": "Helper 1",
+          "frame": "rgb_604",
+          "src": "assets/images/comparison/instance_inputs/office_2_instance_0005/helper_1.webp"
+        },
+        {
+          "role": "Helper 2",
+          "frame": "rgb_1836",
+          "src": "assets/images/comparison/instance_inputs/office_2_instance_0005/helper_2.webp"
+        },
+        {
+          "role": "Helper 3",
+          "frame": "rgb_1943",
+          "src": "assets/images/comparison/instance_inputs/office_2_instance_0005/helper_3.webp"
+        }
+      ],
+      "missingMethods": []
+    },
+    {
+      "id": "room_0_instance_0001",
+      "label": "instance5",
+      "images": {
+        "ours": "assets/images/comparison/instance_level/room_0_instance_0001/ours.png",
+        "gt": "assets/images/comparison/instance_level/room_0_instance_0001/gt.png"
+      },
+      "models": {
+        "ours": "assets/models/comparison/instance_level/room_0_instance_0001/ours.glb",
+        "gt": "assets/models/comparison/instance_level/room_0_instance_0001/gt.glb",
+        "multidiffusion_sam3d": "assets/models/comparison/instance_level/room_0_instance_0001/multidiffusion_sam3d.glb",
+        "reconviagen": "assets/models/comparison/instance_level/room_0_instance_0001/reconviagen.glb",
+        "sam3d": "assets/models/comparison/instance_level/room_0_instance_0001/sam3d.glb",
+        "trellis": "assets/models/comparison/instance_level/room_0_instance_0001/trellis.glb"
+      },
+      "inputViews": [
+        {
+          "role": "Anchor",
+          "frame": "rgb_1992",
+          "src": "assets/images/comparison/instance_inputs/room_0_instance_0001/anchor.webp"
+        },
+        {
+          "role": "Helper 1",
+          "frame": "rgb_220",
+          "src": "assets/images/comparison/instance_inputs/room_0_instance_0001/helper_1.webp"
+        },
+        {
+          "role": "Helper 2",
+          "frame": "rgb_474",
+          "src": "assets/images/comparison/instance_inputs/room_0_instance_0001/helper_2.webp"
+        },
+        {
+          "role": "Helper 3",
+          "frame": "rgb_1745",
+          "src": "assets/images/comparison/instance_inputs/room_0_instance_0001/helper_3.webp"
+        }
+      ],
+      "missingMethods": []
+    },
+    {
+      "id": "1b75758486_instance_0022",
+      "label": "instance6",
+      "dataset": "scannetpp",
+      "images": {},
+      "models": {
+        "multidiffusion_sam3d": "assets/models/comparison/instance_level/1b75758486_instance_0022/multidiffusion_sam3d.glb",
+        "sam3d": "assets/models/comparison/instance_level/1b75758486_instance_0022/sam3d.glb",
+        "ours": "assets/models/comparison/instance_level/1b75758486_instance_0022/ours_ties_realmask.glb",
+        "gt": "assets/models/comparison/instance_level/1b75758486_instance_0022/gt.glb",
+        "reconviagen": "assets/models/comparison/instance_level/1b75758486_instance_0022/reconviagen.glb",
+        "trellis": "assets/models/comparison/instance_level/1b75758486_instance_0022/trellis_multidiffusion.glb"
+      },
+      "inputViews": [
+        {
+          "role": "Anchor",
+          "frame": "25",
+          "src": "assets/images/comparison/instance_inputs/1b75758486_instance_0022/anchor.webp"
+        },
+        {
+          "role": "Helper 1",
+          "frame": "107",
+          "src": "assets/images/comparison/instance_inputs/1b75758486_instance_0022/helper_1.webp"
+        },
+        {
+          "role": "Helper 2",
+          "frame": "294",
+          "src": "assets/images/comparison/instance_inputs/1b75758486_instance_0022/helper_2.webp"
+        },
+        {
+          "role": "Helper 3",
+          "frame": "115",
+          "src": "assets/images/comparison/instance_inputs/1b75758486_instance_0022/helper_3.webp"
+        }
+      ],
+      "missingMethods": []
+    },
+    {
+      "id": "9859de300f_instance_0005",
+      "label": "instance7",
+      "dataset": "scannetpp",
+      "images": {},
+      "models": {
+        "multidiffusion_sam3d": "assets/models/comparison/instance_level/9859de300f_instance_0005/multidiffusion_sam3d.glb",
+        "sam3d": "assets/models/comparison/instance_level/9859de300f_instance_0005/sam3d.glb",
+        "ours": "assets/models/comparison/instance_level/9859de300f_instance_0005/ours.glb",
+        "gt": "assets/models/comparison/instance_level/9859de300f_instance_0005/gt.glb",
+        "reconviagen": "assets/models/comparison/instance_level/9859de300f_instance_0005/reconviagen.glb",
+        "trellis": "assets/models/comparison/instance_level/9859de300f_instance_0005/trellis_multidiffusion.glb"
+      },
+      "inputViews": [
+        {
+          "role": "Anchor",
+          "frame": "330",
+          "src": "assets/images/comparison/instance_inputs/9859de300f_instance_0005/anchor.webp"
+        },
+        {
+          "role": "Helper 1",
+          "frame": "136",
+          "src": "assets/images/comparison/instance_inputs/9859de300f_instance_0005/helper_1.webp"
+        },
+        {
+          "role": "Helper 2",
+          "frame": "49",
+          "src": "assets/images/comparison/instance_inputs/9859de300f_instance_0005/helper_2.webp"
+        },
+        {
+          "role": "Helper 3",
+          "frame": "129",
+          "src": "assets/images/comparison/instance_inputs/9859de300f_instance_0005/helper_3.webp"
+        }
+      ],
+      "missingMethods": []
+    }
+  ],
+  "sceneComparisonItems": [
+    {
+      "id": "room_0",
+      "label": "Replica \u00b7 Room 0",
+      "images": {
+        "ours": "assets/images/comparison/scene_level/room_0/ours_azimuth_35.png"
+      },
+      "models": {
+        "ours": "assets/models/comparison/scene_level/room_0/ours.glb",
+        "gt": "assets/models/comparison/scene_level/room_0/gt.glb"
+      },
+      "referenceViews": [
+        {
+          "label": "Sequence 00",
+          "frame": "rgb_1666",
+          "src": "assets/images/comparison/scene_inputs/room_0/reference_1.png"
+        },
+        {
+          "label": "Sequence 01",
+          "frame": "rgb_590",
+          "src": "assets/images/comparison/scene_inputs/room_0/reference_2.png"
+        },
+        {
+          "label": "Sequence 01",
+          "frame": "rgb_542",
+          "src": "assets/images/comparison/scene_inputs/room_0/reference_3.png"
+        }
+      ]
+    },
+    {
+      "id": "room_1",
+      "label": "Replica \u00b7 Room 1",
+      "images": {
+        "ours": "assets/images/comparison/scene_level/room_1/ours_azimuth_35.png"
+      },
+      "models": {
+        "ours": "assets/models/comparison/scene_level/room_1/ours.glb",
+        "gt": "assets/models/comparison/scene_level/room_1/gt.glb"
+      },
+      "referenceViews": [
+        {
+          "label": "Sequence 00",
+          "frame": "rgb_415",
+          "src": "assets/images/comparison/scene_inputs/room_1/reference_1.png"
+        },
+        {
+          "label": "Sequence 01",
+          "frame": "rgb_580",
+          "src": "assets/images/comparison/scene_inputs/room_1/reference_2.png"
+        },
+        {
+          "label": "Sequence 00",
+          "frame": "rgb_637",
+          "src": "assets/images/comparison/scene_inputs/room_1/reference_3.png"
+        }
+      ]
+    },
+    {
+      "id": "office_0",
+      "label": "Replica \u00b7 Office 0",
+      "images": {
+        "ours": "assets/images/comparison/scene_level/office_0/ours_azimuth_35.png"
+      },
+      "models": {
+        "ours": "assets/models/comparison/scene_level/office_0/ours.glb",
+        "gt": "assets/models/comparison/scene_level/office_0/gt.glb"
+      },
+      "referenceViews": [
+        {
+          "label": "Sequence 00",
+          "frame": "rgb_1196",
+          "src": "assets/images/comparison/scene_inputs/office_0/reference_1.png"
+        },
+        {
+          "label": "Sequence 00",
+          "frame": "rgb_1405",
+          "src": "assets/images/comparison/scene_inputs/office_0/reference_2.png"
+        },
+        {
+          "label": "Sequence 01",
+          "frame": "rgb_399",
+          "src": "assets/images/comparison/scene_inputs/office_0/reference_3.png"
+        }
+      ]
+    },
+    {
+      "id": "office_1",
+      "label": "Replica \u00b7 Office 1",
+      "images": {
+        "ours": "assets/images/comparison/scene_level/office_1/ours_azimuth_35.png"
+      },
+      "models": {
+        "ours": "assets/models/comparison/scene_level/office_1/ours.glb",
+        "gt": "assets/models/comparison/scene_level/office_1/gt.glb"
+      },
+      "referenceViews": [
+        {
+          "label": "Sequence 01",
+          "frame": "rgb_582",
+          "src": "assets/images/comparison/scene_inputs/office_1/reference_1.png"
+        },
+        {
+          "label": "Sequence 01",
+          "frame": "rgb_1989",
+          "src": "assets/images/comparison/scene_inputs/office_1/reference_2.png"
+        },
+        {
+          "label": "Sequence 00",
+          "frame": "rgb_75",
+          "src": "assets/images/comparison/scene_inputs/office_1/reference_3.png"
+        }
+      ]
+    },
+    {
+      "id": "office_2",
+      "label": "Replica \u00b7 Office 2",
+      "images": {
+        "ours": "assets/images/comparison/scene_level/office_2/ours_azimuth_35.png"
+      },
+      "models": {
+        "ours": "assets/models/comparison/scene_level/office_2/ours.glb",
+        "gt": "assets/models/comparison/scene_level/office_2/gt.glb"
+      },
+      "referenceViews": [
+        {
+          "label": "Sequence 00",
+          "frame": "rgb_0",
+          "src": "assets/images/comparison/scene_inputs/office_2/reference_1.png"
+        },
+        {
+          "label": "Sequence 00",
+          "frame": "rgb_671",
+          "src": "assets/images/comparison/scene_inputs/office_2/reference_2.png"
+        },
+        {
+          "label": "Sequence 01",
+          "frame": "rgb_20",
+          "src": "assets/images/comparison/scene_inputs/office_2/reference_3.png"
+        }
+      ]
+    }
+  ],
+  "pipeline": {
+    "steps": [
+      {
+        "src": "assets/images/pipeline/scenesam3d_method.png",
+        "alt": "Scene-SAM3D method overview: occupancy-coverage view selection and conflict-aware multiview fusion"
+      }
+    ],
+    "detail": {
+      "src": "assets/images/pipeline/scenesam3d_layout_refinement.png",
+      "alt": "Scene-SAM3D rigid-object Gaussian layout refinement"
+    }
+  }
+}
