@@ -508,5 +508,65 @@
       "src": "assets/images/pipeline/scenesam3d_layout_refinement.png",
       "alt": "Scene-SAM3D rigid-object Gaussian layout refinement"
     }
-  }
+  },
+  "fineGrainedComparisons": [
+    {
+      "id": "sofa-cushions",
+      "label": "Sofa + four cushions",
+      "parts": [
+        {
+          "label": "Sofa",
+          "model": "assets/models/comparison/fine_grained/sofa-cushions/part-0.glb"
+        },
+        {
+          "label": "Cushion 1",
+          "model": "assets/models/comparison/fine_grained/sofa-cushions/part-1.glb"
+        },
+        {
+          "label": "Cushion 2",
+          "model": "assets/models/comparison/fine_grained/sofa-cushions/part-2.glb"
+        },
+        {
+          "label": "Cushion 3",
+          "model": "assets/models/comparison/fine_grained/sofa-cushions/part-3.glb"
+        },
+        {
+          "label": "Cushion 4",
+          "model": "assets/models/comparison/fine_grained/sofa-cushions/part-4.glb"
+        }
+      ],
+      "assembly": "assets/models/comparison/fine_grained/sofa-cushions/assembly.glb",
+      "cameraOrbit": "18deg 72deg 4.7m",
+      "cameraTarget": "0m 0.45m 0m"
+    },
+    {
+      "id": "sofa-throw",
+      "label": "Sofa + three cushions + throw",
+      "parts": [
+        {
+          "label": "Sofa",
+          "model": "assets/models/comparison/fine_grained/sofa-throw/part-0.glb"
+        },
+        {
+          "label": "Cushion 1",
+          "model": "assets/models/comparison/fine_grained/sofa-throw/part-1.glb"
+        },
+        {
+          "label": "Throw",
+          "model": "assets/models/comparison/fine_grained/sofa-throw/part-2.glb"
+        },
+        {
+          "label": "Cushion 2",
+          "model": "assets/models/comparison/fine_grained/sofa-throw/part-3.glb"
+        },
+        {
+          "label": "Cushion 3",
+          "model": "assets/models/comparison/fine_grained/sofa-throw/part-4.glb"
+        }
+      ],
+      "assembly": "assets/models/comparison/fine_grained/sofa-throw/assembly.glb",
+      "cameraOrbit": "18deg 72deg 4.7m",
+      "cameraTarget": "0m 0.45m 0m"
+    }
+  ]
 }

@@ -11,13 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initLightbox();
   initBibtexCopy();
-  fetch('assets/data/scenes.json?v=20260923hd1440')
+  fetch('assets/data/scenes.json?v=20261112fine')
     .then((res) => res.json())
     .then((data) => {
       SITE_DATA = data;
       initShowcase(data);
       initPipeline(data);
       initComparison(data);
+      initFineGrained(data);
     })
     .catch((err) => {
       console.error('Failed to load assets/data/scenes.json', err);
@@ -153,6 +154,13 @@ function closeLightbox() {
 
 function initLightbox() {
   const lb = document.getElementById('lightbox');
+  document.querySelectorAll('.zipnerf-image').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      openLightbox(link.href, link.querySelector('img').alt);
+    });
+  });
   document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
   lb.addEventListener('click', (e) => {
     if (e.target === lb) closeLightbox();
@@ -461,7 +469,7 @@ function initComparison(data) {
       }).filter(Boolean)
     : allInstances;
 
-  document.querySelectorAll('.comparison-panel').forEach((panel) => {
+  document.querySelectorAll('.comparison-panel[data-comparison-key]').forEach((panel) => {
     const key = panel.dataset.comparisonKey;
     const items = key === 'scene'
       ? (data.sceneComparisonItems || [])

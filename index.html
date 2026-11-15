@@ -8,7 +8,7 @@
 <title>Scene-SAM3D: Seeing More of the Whole via View Selection and Conflict-Aware Fusion</title>
 <meta name="description" content="Project page for Scene-SAM3D: Seeing More of the Whole via View Selection and Conflict-Aware Fusion.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css?v=20260926subtitle">
+<link rel="stylesheet" href="style.css?v=20261115zipnerf">
 </head>
 <body>
 
@@ -172,6 +172,108 @@
           <button type="button" data-role="reset-camera">↺ Reset view</button>
         </div>
       </article>
+      <article class="comparison-panel fine-grained-panel" id="fine-grained">
+        <div class="comparison-panel-heading">
+          <span class="comparison-index">03</span>
+          <div>
+            <h3>Fine-grained Scene Decomposition Generation</h3>
+            <p>Independently generated instances, assembled into an optimized scene layout.</p>
+          </div>
+        </div>
+        <div class="fine-grained-cases" role="group" aria-label="Fine-grained scene examples"></div>
+        <div class="fine-grained-heading">
+          <h4><span>01</span> Individual instances</h4>
+          <p>Original generations · Drag each part to inspect</p>
+        </div>
+        <div class="fine-grained-parts"></div>
+        <p class="fine-grained-scale-note">Parts are shown at individual viewing scales.</p>
+        <div class="fine-grained-heading">
+          <h4><span>02</span> rigid-object gaussian layout refinement</h4>
+          <p>Separated parts → Shared scene layout</p>
+        </div>
+        <div class="fine-grained-stage">
+          <div class="fine-grained-assembly"></div>
+          <span class="fine-grained-badge">Separated parts</span>
+          <p class="fine-grained-status" role="status">Loading assembly…</p>
+          <span class="fine-grained-hint">Drag to rotate · Scroll to zoom</span>
+        </div>
+        <div class="fine-grained-playback" role="group" aria-label="Assembly animation controls">
+          <button type="button" data-assembly="play" disabled>Play assembly</button>
+          <button type="button" data-assembly="replay" disabled>↺ Replay</button>
+          <label for="assembly-progress">Assembly</label>
+          <input id="assembly-progress" type="range" min="0" max="1000" value="0" aria-label="Assembly progress" disabled>
+          <output for="assembly-progress">0%</output>
+        </div>
+        <div class="fine-grained-endpoints">
+          <button type="button" data-assembly="separated" disabled>Separated parts</button>
+          <button type="button" data-assembly="assembled" disabled>Optimized layout</button>
+          <button type="button" data-assembly="reset" disabled>Reset view</button>
+        </div>
+        <p class="fine-grained-caption">The animation brings the optimized instances into their shared layout; the final frame preserves their optimized relative positions and scales.</p>
+      </article>
+      <article class="comparison-panel zipnerf-panel" id="zipnerf-scenes">
+        <div class="comparison-panel-heading">
+          <span class="comparison-index">04</span>
+          <div>
+            <h3>Zip-NeRF Scenes</h3>
+            <p>Scene reconstruction from real-world observations.</p>
+          </div>
+        </div>
+        <div class="scene-reference-heading">
+          <strong>Scene Reference Images</strong>
+          <span>Click any image to enlarge</span>
+        </div>
+        <div class="scene-reference-grid zipnerf-references">
+          <figure class="scene-reference-card">
+            <a class="zipnerf-image" href="assets/images/comparison/zipnerf/reference-01.jpg" aria-label="Enlarge reference image 1: kitchen">
+              <img src="assets/images/comparison/zipnerf/reference-01.jpg" alt="Zip-NeRF scene reference: kitchen counters, cabinets, and cookware" width="2787" height="1586" loading="lazy" decoding="async">
+            </a>
+            <figcaption>Reference 01</figcaption>
+          </figure>
+          <figure class="scene-reference-card">
+            <a class="zipnerf-image" href="assets/images/comparison/zipnerf/reference-02.jpg" aria-label="Enlarge reference image 2: dining area">
+              <img src="assets/images/comparison/zipnerf/reference-02.jpg" alt="Zip-NeRF scene reference: dining table, chairs, shelves, and windows" width="2787" height="1586" loading="lazy" decoding="async">
+            </a>
+            <figcaption>Reference 02</figcaption>
+          </figure>
+          <figure class="scene-reference-card">
+            <a class="zipnerf-image" href="assets/images/comparison/zipnerf/reference-03.jpg" aria-label="Enlarge reference image 3: cabinets and hallway">
+              <img src="assets/images/comparison/zipnerf/reference-03.jpg" alt="Zip-NeRF scene reference: tall cabinets, drawers, and hallway" width="2787" height="1586" loading="lazy" decoding="async">
+            </a>
+            <figcaption>Reference 03</figcaption>
+          </figure>
+          <figure class="scene-reference-card">
+            <a class="zipnerf-image" href="assets/images/comparison/zipnerf/reference-04.jpg" aria-label="Enlarge reference image 4: storage area">
+              <img src="assets/images/comparison/zipnerf/reference-04.jpg" alt="Zip-NeRF scene reference: cabinets, bookcase, and storage area" width="2787" height="1586" loading="lazy" decoding="async">
+            </a>
+            <figcaption>Reference 04</figcaption>
+          </figure>
+        </div>
+        <div class="scene-reference-heading zipnerf-results-heading">
+          <strong>Scene-SAM3D (Ours)</strong>
+          <span>Reconstructed scene and detail views</span>
+        </div>
+        <div class="zipnerf-results">
+          <figure class="scene-reference-card">
+            <a class="zipnerf-image" href="assets/images/comparison/zipnerf/result-01.png" aria-label="Enlarge reconstructed scene overview">
+              <img src="assets/images/comparison/zipnerf/result-01.png" alt="Our reconstructed Zip-NeRF scene viewed from above" width="1920" height="1440" loading="lazy" decoding="async">
+            </a>
+            <figcaption><strong>Scene overview</strong></figcaption>
+          </figure>
+          <figure class="scene-reference-card">
+            <a class="zipnerf-image" href="assets/images/comparison/zipnerf/result-02.png" aria-label="Enlarge reconstructed dining area">
+              <img src="assets/images/comparison/zipnerf/result-02.png" alt="Our reconstructed dining area with individual chairs, table, plants, and shelves" width="1920" height="1440" loading="lazy" decoding="async">
+            </a>
+            <figcaption><strong>Dining area</strong></figcaption>
+          </figure>
+          <figure class="scene-reference-card">
+            <a class="zipnerf-image" href="assets/images/comparison/zipnerf/result-03.png" aria-label="Enlarge reconstructed kitchen">
+              <img src="assets/images/comparison/zipnerf/result-03.png" alt="Our reconstructed kitchen with cabinets, cookware, sink, and refrigerator" width="1920" height="1440" loading="lazy" decoding="async">
+            </a>
+            <figcaption><strong>Kitchen</strong></figcaption>
+          </figure>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -184,6 +286,7 @@
 </div>
 
 <script type="module" src="assets/js/model-viewer-4.3.1.min.js"></script>
-<script src="main.js?v=20260923hd1440"></script>
+<script src="fine-grained.js?v=20261112"></script>
+<script src="main.js?v=20261115zipnerf"></script>
 </body>
 </html>
